@@ -17,13 +17,23 @@ const Register = () => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  
+  const axiosInstance = axios.create({
+    baseURL: 'http://localhost:8800/api',
+  });
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/auth/register", inputs);
+      await axiosInstance.post("/auth/register", inputs);
       navigate("/login");
     } catch (err) {
-      setError(err.response.data);
+      if (err.response.status === 409) {
+        setError("Username or email already exists.");
+      } else {
+        setError("An error occurred during registration.");
+        console.error("Server error details:", err.response.data);
+      }
     }
   };
 

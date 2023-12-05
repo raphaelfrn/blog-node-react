@@ -13,17 +13,22 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const { login } = useContext(AuthContext);
+ // const { login } = useContext(AuthContext);
 
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const axiosInstance = axios.create({
+    baseURL: 'http://localhost:8800/api',
+  });
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await login(inputs)
+      await axiosInstance.post("/auth/login", inputs);
+      
       navigate("/");
     } catch (err) {
       setError(err.response.data);

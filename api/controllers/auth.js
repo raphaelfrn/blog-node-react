@@ -1,25 +1,37 @@
 import { db } from "../db.js";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export const register = (req, res) => {
-  //CHECK EXISTING USER
-  const q = "SELECT * FROM users WHERE email = ? OR username = ?";
+  // CHECK EXISTING USER
+  const checkUserQuery = "SELECT * FROM users WHERE email = ? OR username = ?";
 
-  db.query(q, [req.body.email, req.body.username], (err, data) => {
-    if (err) return res.status(500).json(err);
-    if (data.length) return res.status(409).json("User already exists!");
+  db.query(checkUserQuery, [req.body.email, req.body.username], (err, data) => {
+    if (err) {
+      return res.status(500).json(err);
+    }
 
-    //Hash the password and create a user
-    const salt = bcrypt.genSaltSync(10);
-    const hash = bcrypt.hashSync(req.body.password, salt);
+    if (data.length) {
+      return res.status(409).json("User already exists!");
+    }
 
-    const q = "INSERT INTO users(`username`,`email`,`password`) VALUES (?)";
-    const values = [req.body.username, req.body.email, hash];
+    // Hash the password and create a user
+    bcrypt.hash(req.body.password, 10, function (hashErr, hash) {
+      if (hashErr) {
+        return res.status(500).json(hashErr);
+      }
 
-    db.query(q, [values], (err, data) => {
-      if (err) return res.status(500).json(err);
-      return res.status(200).json("User has been created.");
+      const insertUserQuery =
+        "INSERT INTO users(`username`, `email`, `password`) VALUES (?, ?, ?)";
+      const values = [req.body.username, req.body.email, hash];
+
+      db.query(insertUserQuery, values, (insertErr, insertData) => {
+        if (insertErr) {
+          return res.status(500).json(insertErr);
+        }
+
+        return res.status(200).json("User has been created.");
+      });
     });
   });
 };
