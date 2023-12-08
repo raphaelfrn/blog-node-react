@@ -12,15 +12,16 @@ première etape : git clone from youtube-2022 --single-branc -b "react-mini"
 client :
 puis faire npm install 
 npm i react-router-dom
-npm i react-quill
+npm i react-quill (rich text editor)
+npm i moment (pour le "posted 2 days ago")
+npm i dompurify
 
 
 back:
 npm i express mysql nodemon
-npm i bcryptjs
+npm i bcrypt (password hash)
 npm i axios
-npm i cors
+npm i cors (optional)
 npm i jsonwebtoken
 npm i cookie-parser
-
-tuto j'en suis à 1H01 là
+npm i multer (upload de fichier)
