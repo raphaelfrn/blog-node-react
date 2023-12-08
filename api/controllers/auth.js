@@ -38,7 +38,6 @@ export const register = (req, res) => {
 
 export const login = (req, res) => {
   //CHECK USER
-console.log("login route reached back auth");
 
   const q = "SELECT * FROM users WHERE username = ?";
 

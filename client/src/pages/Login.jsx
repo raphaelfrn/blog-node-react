@@ -28,7 +28,7 @@ const Login = () => {
     e.preventDefault();
     try {
     //  await axiosInstance.post("/auth/login", inputs);
-       await login(inputs, {withCredentials:true})
+       await login(inputs)
       navigate("/");
     } catch (err) {
       setError(err.response.data);

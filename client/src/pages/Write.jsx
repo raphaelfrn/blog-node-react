@@ -36,14 +36,16 @@ const Write = () => {
             desc: value,
             cat,
             img: file ? imgUrl : "",
-          })
+          }, 
+          { withCredentials: true })
         : await axios.post(`http://localhost:8800/api/posts/`, {
             title,
             desc: value,
             cat,
             img: file ? imgUrl : "",
             date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
-          });
+          },
+          { withCredentials: true });
           navigate("/")
     } catch (err) {
       console.log(err);
@@ -87,7 +89,6 @@ const Write = () => {
             Upload Image
           </label>
           <div className="buttons">
-            <button>Save as a draft</button>
             <button onClick={handleClick}>Publish</button>
           </div>
         </div>
