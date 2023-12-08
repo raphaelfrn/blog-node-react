@@ -10,7 +10,10 @@ import multer from "multer";
 
 const app = express();
 app.use(
-    cors()
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
 );
 
 

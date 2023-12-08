@@ -25,3 +25,6 @@ npm i cors (optional)
 npm i jsonwebtoken
 npm i cookie-parser
 npm i multer (upload de fichier)
+
+
+left to do: change css / hydrate db / add .sql ici / add tests / readme propre

@@ -38,6 +38,7 @@ export const register = (req, res) => {
 
 export const login = (req, res) => {
   //CHECK USER
+console.log("login route reached back auth");
 
   const q = "SELECT * FROM users WHERE username = ?";
 
@@ -60,6 +61,8 @@ export const login = (req, res) => {
     res
       .cookie("access_token", token, {
         httpOnly: true,
+        sameSite:"none",
+        secure:true,
       })
       .status(200)
       .json(other);
