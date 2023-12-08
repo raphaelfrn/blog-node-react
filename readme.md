@@ -27,4 +27,14 @@ npm i cookie-parser
 npm i multer (upload de fichier)
 
 
-left to do: change css / hydrate db / add .sql ici / add tests / readme propre
+left to do: change css /add modals/ hydrate db / add .sql ici / add tests / readme propre
+
+
+change css: 
+-colors - check
+-logo
+-links (read more etc)
+-change cat
+
+-add modals for supression
+-possibilité de voir article sans être log ? (si username null)

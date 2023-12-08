@@ -1,8 +1,10 @@
-$lightGreen: #b9e7e7;
+$pastelYellow: #FFEFD3;
+$darkBlue: #294C60;;
 
 .app {
   display: flex;
   justify-content: center;
+  color: $darkBlue;
   .container {
     width: 1024px;
 
@@ -18,11 +20,11 @@ $lightGreen: #b9e7e7;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background-color: $lightGreen;
+      background-color: $pastelYellow;
 
       h1 {
         font-size: 20px;
-        color: teal;
+        color: $darkBlue;
         margin-bottom: 20px;
       }
 
@@ -43,7 +45,7 @@ $lightGreen: #b9e7e7;
         button {
           padding: 10px;
           border: none;
-          background-color: teal;
+          background-color: $darkBlue;
           cursor: pointer;
           color: white;
         }
@@ -89,7 +91,7 @@ $lightGreen: #b9e7e7;
           }
 
           .write {
-            background-color: $lightGreen;
+            background-color: $pastelYellow;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -100,9 +102,9 @@ $lightGreen: #b9e7e7;
             border: 1px solid white;
 
             &:hover {
-              color: teal;
-              background-color: white;
-              border: 1px solid teal;
+              color:  $pastelYellow;
+              background-color: $darkBlue;
+              border: 1px solid  $pastelYellow;
             }
           }
         }
@@ -114,7 +116,7 @@ $lightGreen: #b9e7e7;
     footer {
       margin-top: 100px;
       padding: 20px;
-      background-color: $lightGreen;
+      background-color: $pastelYellow;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -149,7 +151,7 @@ $lightGreen: #b9e7e7;
               content: "";
               width: 100%;
               height: 100%;
-              background-color: $lightGreen;
+              background-color: $pastelYellow;
               position: absolute;
               top: 20px;
               left: -20px;
@@ -182,14 +184,14 @@ $lightGreen: #b9e7e7;
               padding: 10px 20px;
               border: none;
               cursor: pointer;
-              background-color: white;
-              border: 1px solid teal;
-              color: teal;
+              background-color: $pastelYellow;
+              border: 1px solid $darkBlue;
+              color: $darkBlue;
 
               &:hover {
-                border: 1px solid white;
-                background-color: $lightGreen;
-                color: black;
+                color:  $pastelYellow;
+                background-color: $darkBlue;
+                border: 1px solid  $pastelYellow;
               }
             }
           }
@@ -245,7 +247,6 @@ $lightGreen: #b9e7e7;
 
         h1 {
           font-size: 42px;
-          color: #333;
         }
 
         p {
@@ -261,7 +262,7 @@ $lightGreen: #b9e7e7;
 
         h1 {
           font-size: 20px;
-          color: #555;
+          
         }
 
         .post {
@@ -275,23 +276,19 @@ $lightGreen: #b9e7e7;
             object-fit: cover;
           }
 
-          h2 {
-            color: #555;
-          }
-
           button {
             width: max-content;
             padding: 7.5px 15px;
             border: none;
             cursor: pointer;
-            color: teal;
-            background-color: white;
-            border: 1px solid teal;
+            color: $darkBlue;
+            background-color: $pastelYellow;
+            border: 1px solid $darkBlue;
 
             &:hover {
-              border: 1px solid white;
-              background-color: $lightGreen;
-              color: black;
+              border: 1px solid $pastelYellow;
+              background-color: $darkBlue;
+              color: $pastelYellow;
             }
           }
         }
@@ -342,7 +339,7 @@ $lightGreen: #b9e7e7;
           flex-direction: column;
           justify-content: space-between;
           font-size: 12px;
-          color: #555;
+          color: $darkBlue;
 
           h1{
             font-size: 20px;
@@ -359,16 +356,16 @@ $lightGreen: #b9e7e7;
 
             :first-child{
               cursor: pointer;
-              color: teal;
-              background-color: white;
-              border: 1px solid teal;
+              color: $darkBlue;
+              background-color: $pastelYellow;
+              border: 1px solid $darkBlue;
               padding: 3px 5px;
             }
             :last-child{
               cursor: pointer;
-              color: white;
-              background-color: teal;
-              border: 1px solid teal;
+              color: $pastelYellow;
+              background-color: $darkBlue;
+              border: 1px solid $darkBlue;
               padding: 3px 5px;
             }
           }
@@ -377,7 +374,7 @@ $lightGreen: #b9e7e7;
             display: flex;
             align-items: center;
             gap: 2px;
-            color: teal;
+            color: $darkBlue;
           }
         }
       }
