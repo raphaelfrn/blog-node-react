@@ -234,6 +234,8 @@ $darkBlue: #294C60;;
           }
         }
 
+        
+
         .edit {
           display: flex;
           gap: 5px;
@@ -254,6 +256,54 @@ $darkBlue: #294C60;;
           line-height: 30px;
         }
       }
+      .delete-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 1px solid $darkBlue;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          font-size: 16px;
+          margin-bottom: 20px;
+          color: $darkBlue;
+        }
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          cursor: pointer;
+          background-color: $pastelYellow;
+          border: 1px solid $darkBlue;
+          color: $darkBlue;
+          font-size: 14px;
+          margin-right: 10px;
+
+          &:hover {
+            color: $pastelYellow;
+            background-color: $darkBlue;
+            border: 1px solid $pastelYellow;
+          }
+
+          &.confirm {
+            background-color: $darkBlue;
+            color: $pastelYellow;
+
+            &:hover {
+              color: $darkBlue;
+              background-color: $pastelYellow;
+              border: 1px solid $darkBlue;
+            }
+          }
+        }
+      }
+
       .menu {
         flex: 2;
         display: flex;

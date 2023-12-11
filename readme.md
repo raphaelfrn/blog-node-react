@@ -1,26 +1,26 @@
 # Draft
 
 To do list:
--Css:   -style
+<s>-Css:   -style
         -logo
--update links
+-update links </s>
 -change categories?
 -hydrate database with proper articles and images and export sql to add it here
--add modals to delete post
--post permission to display them without being logged (username null)
+<s>-add modals to delete post </s>
+<s>-posts: permission to display them without being logged (username null) </s>
 -add tests
 -finish this readme to have a proper "doc"
 
 
 
 # Context
-This project is a fullstack blog application made using node.js, ReactJs and mySql.
-Inspired from a tutorial made by [LamaDev], I made this application to practice using node and react. I customized css to my own liking and added tests in order to showcase my ability to build a full stack application from start to almost finish (no deployment here).
-You'll find the sql database file in this repository.
+This project is a full-stack blog application created using Node.js, React.js, and MySQL. Inspired by a tutorial (by [LamaDev] ), I developed this application to practice working with Node and React. I customized the CSS to my preferences and added tests to demonstrate my ability to build a full-stack application from start to almost finish (deployment excluded). You'll find the SQL database file in this repository
 
 
-## Quick Start
-Notes for myself, because I'll probably forget all the installation setup, dependecies and things to install on a fresh pc.
+
+## Setup Notes
+
+These notes serve as a quick reference for setting up a development environment on a new PC, with the right dependecies for this project.
 
 Install [mySql], [Xampp], [NodeJs]
 
@@ -37,6 +37,7 @@ cd .\client\
 ```
 
 Client side:
+
 
 [React-Router-Dom]
 ```sh
@@ -112,7 +113,7 @@ To launch server
 npm start
 ```
 
-[//]: # Links
+
 
 [LamaDev]: <https://www.youtube.com/@LamaDev>
 [mySql]: <https://www.mysql.com/fr/downloads/>

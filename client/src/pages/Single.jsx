@@ -13,6 +13,7 @@ import DOMPurify from "dompurify";
 const Single = () => {
 
     const [post, setPost] = useState({});
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -35,6 +36,9 @@ const Single = () => {
         fetchData();
       }, [postId]);
     
+      const openModal = () => {
+        setShowDeleteModal(true);
+      };
 
     const handleDelete = async ()=>{
         try {
@@ -58,12 +62,13 @@ const Single = () => {
                 <span>{post.username}</span>
                 <p>Posted {moment(post.date).fromNow()}</p>
               </div>
-              {currentUser.username === post.username && (
+              {currentUser && currentUser.username === post.username && (
                 <div className="edit">
                   <Link to={`/write?edit=2`} state={post}>
                     <img src={Edit} alt="" />
                   </Link>
-                  <img onClick={handleDelete} src={Delete} alt="" />
+                  <img onClick={openModal} src={Delete} alt="" />
+                    
                 </div>
               )}
             </div>
@@ -73,6 +78,14 @@ const Single = () => {
                 __html: DOMPurify.sanitize(post.desc),
               }}
             ></p>      </div>
+        
+            {showDeleteModal && (
+            <div className="delete-modal">
+              <p>Êtes-vous sûr de vouloir supprimer ce post ?</p>
+              <button onClick={handleDelete}>Oui, supprimer</button>
+              <button onClick={() => setShowDeleteModal(false)}>Annuler</button>
+            </div>
+          )}
           <Menu cat={post.cat}/>
         </div>
       );
