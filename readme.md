@@ -8,7 +8,7 @@ To do list:
 -hydrate database with proper articles and images and export sql to add it here
 <s>-add modals to delete post </s>
 <s>-posts: permission to display them without being logged (username null) </s>
--Write button in menu only whe logged in
+<s>-Write button in navbar only whe logged in </s>
 -add tests
 -finish this readme to have a proper "doc"
 
