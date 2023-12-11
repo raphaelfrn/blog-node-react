@@ -32,9 +32,8 @@ left to do: change css /add modals/ hydrate db / add .sql ici / add tests / read
 
 change css: 
 -colors - check
--logo
--links (read more etc)
+-logo -check
+-links (read more etc) - check
 -change cat
-
 -add modals for supression
 -possibilité de voir article sans être log ? (si username null)
