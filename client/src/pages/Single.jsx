@@ -86,7 +86,7 @@ const Single = () => {
               <button onClick={() => setShowDeleteModal(false)}>Annuler</button>
             </div>
           )}
-          <Menu cat={post.cat}/>
+          <Menu cat={post.cat} currentPostId={post.id}/>
         </div>
       );
     };

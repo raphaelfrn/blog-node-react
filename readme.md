@@ -9,9 +9,24 @@ To do list:
 <s>-add modals to delete post </s>
 <s>-posts: permission to display them without being logged (username null) </s>
 <s>-Write button in navbar only whe logged in </s>
--add tests
 -finish this readme to have a proper "doc"
+-add tests
 
+tests d'intégration:
+S'assurer qu'un utilisateur peut s'inscrire avec succès.
+Vérifier que l'utilisateur peut se connecter avec les informations d'inscription.
+Valider les messages d'erreur pour les cas où l'inscription échoue.
+Modifier un article et confirmer que les changements sont pris en compte.
+Supprimer un article et s'assurer qu'il est retiré de la liste.
+Tester la déconnexion et s'assurer que l'utilisateur est correctement déconnecté
+
+tests unitaires:
+Tester chaque fonction de l'API côté serveur qui gère les opérations CRUD.
+Tester chaque composant React pour s'assurer qu'il rend correctement.
+
+tests de sécurité:
+Vérifier que les utilisateurs ne peuvent pas modifier ou supprimer les articles d'autres utilisateurs.
+S'assurer que seuls les utilisateurs connectés peuvent accéder à certaines fonctionnalités.
 
 
 # Context
