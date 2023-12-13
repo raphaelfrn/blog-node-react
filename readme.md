@@ -4,7 +4,7 @@ This project is a full-stack blog application created using Node.js, React.js, a
 
 ## Setup Notes
 
-These notes serve as a quick reference for setting up a development environment on a new PC, with the right dependecies for this project.
+These notes serve as a quick reference (mainly for myself) for setting up a development environment on a new PC, with the right dependecies for this project.
 
 Install [mySql], [Xampp], [NodeJs]
 
@@ -97,30 +97,14 @@ To launch server
 npm start
 ```
 
+## Tests
 
+I test my controllers (auth and post), the tests files are located in root/api/tests
 
-
-# Draft
-
-To do list:
--finish this readme to have a proper "doc"
--add tests
-
-tests d'intégration:
-S'assurer qu'un utilisateur peut s'inscrire avec succès.
-Vérifier que l'utilisateur peut se connecter avec les informations d'inscription.
-Valider les messages d'erreur pour les cas où l'inscription échoue.
-Modifier un article et confirmer que les changements sont pris en compte.
-Supprimer un article et s'assurer qu'il est retiré de la liste.
-Tester la déconnexion et s'assurer que l'utilisateur est correctement déconnecté
-
-tests unitaires:
-Tester chaque fonction de l'API côté serveur qui gère les opérations CRUD.
-Tester chaque composant React pour s'assurer qu'il rend correctement.
-
-tests de sécurité:
-Vérifier que les utilisateurs ne peuvent pas modifier ou supprimer les articles d'autres utilisateurs.
-S'assurer que seuls les utilisateurs connectés peuvent accéder à certaines fonctionnalités.
+```sh
+npm i -D jest supertest
+npm test
+```
 
 
 
